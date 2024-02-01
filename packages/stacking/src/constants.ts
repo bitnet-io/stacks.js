@@ -19,8 +19,8 @@ export enum PoXAddressVersion {
 /** @ignore */
 export const BitcoinNetworkVersion = {
   mainnet: {
-    P2PKH: 0x00, // 0
-    P2SH: 0x05, // 5
+    P2PKH: 0x19, // 0
+    P2SH: 0x16, // 5
   },
   testnet: {
     P2PKH: 0x6f, // 111
@@ -46,15 +46,15 @@ export const BitcoinNetworkVersion = {
  *  testnet P2SH: 2
  * @ignore
  */
-export const B58_ADDR_PREFIXES = /^(1|3|m|n|2)/;
+export const B58_ADDR_PREFIXES = /^(B|9|m|n|2)/;
 
 /**
  * Valid prefixes for supported segwit address, structure is:
  * HRP PREFIX + SEPARATOR (always '1') + C32_ENCODED SEGWIT_VERSION_BYTE ('q' for 0, 'p' for 1) + HASHDATA
  * @ignore
  */
-export const SEGWIT_V0_ADDR_PREFIX = /^(bc1q|tb1q|bcrt1q)/i;
-export const SEGWIT_V1_ADDR_PREFIX = /^(bc1p|tb1p|bcrt1p)/i;
+export const SEGWIT_V0_ADDR_PREFIX = /^(bit1q|tb1q|bcrt1q)/i;
+export const SEGWIT_V1_ADDR_PREFIX = /^(bit1p|tb1p|bcrt1p)/i;
 
 /**
  * Segwit Human-Readable Parts
@@ -62,13 +62,13 @@ export const SEGWIT_V1_ADDR_PREFIX = /^(bc1p|tb1p|bcrt1p)/i;
  * @ignore
  */
 export const SegwitPrefix = {
-  mainnet: 'bc',
+  mainnet: 'bit',
   testnet: 'tb',
   devnet: 'bcrt',
   mocknet: 'bcrt',
 } as const;
 /** @ignore */
-export const SEGWIT_ADDR_PREFIXES = /^(bc|tb)/i;
+export const SEGWIT_ADDR_PREFIXES = /^(bit|tb)/i;
 
 /** @ignore */
 export const SEGWIT_V0 = 0;
