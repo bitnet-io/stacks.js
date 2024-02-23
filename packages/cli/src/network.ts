@@ -102,12 +102,12 @@ export class CLINetworkAdapter {
     const addressInfo = bitcoin.address.fromBase58Check(address);
     const addressHash = addressInfo.hash;
     const addressVersion = addressInfo.version;
-    let newVersion = 0;
+    let newVersion = 25;
 
     if (addressVersion === this.legacyNetwork.layer1.pubKeyHash) {
-      newVersion = 0;
+      newVersion = 25;
     } else if (addressVersion === this.legacyNetwork.layer1.scriptHash) {
-      newVersion = 5;
+      newVersion = 22;
     }
     return bitcoin.address.toBase58Check(addressHash, newVersion);
   }

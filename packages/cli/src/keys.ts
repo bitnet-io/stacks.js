@@ -22,9 +22,9 @@ import * as wif from 'wif';
 import { getMaxIDSearchIndex, getPrivateKeyAddress } from './common';
 import { CLINetworkAdapter } from './network';
 
-const BITCOIN_PUBKEYHASH = 0;
+const BITCOIN_PUBKEYHASH = 25;
 const BITCOIN_PUBKEYHASH_TESTNET = 111;
-const BITCOIN_WIF = 128;
+const BITCOIN_WIF = 158;
 const BITCOIN_WIF_TESTNET = 239;
 
 export const STX_WALLET_COMPATIBLE_SEED_STRENGTH = 256;
